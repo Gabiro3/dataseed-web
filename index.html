@@ -72,12 +72,12 @@
       }
     `);
 
-    iframe.src = "https://mako-ai.vercel.app/chatbot";
+    iframe.src = "https://dataseed-web.vercel.app/chatbot";
     iframe.classList.add('chat-frame');
     document.body.appendChild(iframe);
 
     window.addEventListener("message", (e) => {
-      if (e.origin !== "https://mako-ai.vercel.app") return null;
+      if (e.origin !== "https://dataseed-web..vercel.app") return null;
       let dimensions = JSON.parse(e.data);
       iframe.width = dimensions.width;
       iframe.height = dimensions.height;
