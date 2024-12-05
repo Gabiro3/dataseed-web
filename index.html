@@ -53,7 +53,12 @@
   <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
   <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
   
-  <!-- Add the JavaScript code in a <script> tag here -->
+
+</head>
+
+<body>
+
+      <!-- Add the JavaScript code in a <script> tag here -->
   <script>
     const iframe = document.createElement("iframe");
 
@@ -72,26 +77,18 @@
       }
     `);
 
-    iframe.src = "https://dataseed-web.vercel.app/chatbot";
+    iframe.src = "https://mako-ai.vercel.app/chatbot";
     iframe.classList.add('chat-frame');
     document.body.appendChild(iframe);
 
     window.addEventListener("message", (e) => {
-      if (e.origin !== "https://dataseed-web..vercel.app") return null;
+      if (e.origin !== "https://mako-ai.vercel.app") return null;
       let dimensions = JSON.parse(e.data);
       iframe.width = dimensions.width;
       iframe.height = dimensions.height;
       iframe.contentWindow.postMessage("71606665-86be-489c-953e-76acf70c769b", "https://mako-ai.vercel.app/");
     });
   </script>
-
-</head>
-
-<body>
-
-  <!-- 
-    - #HEADER
-  -->
 
   <header class="header" data-header>
     <div class="container">
